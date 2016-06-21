@@ -10,6 +10,7 @@
 		CF121C2E1D19E5860066CA74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF121C2D1D19E5860066CA74 /* AppDelegate.swift */; };
 		CF121C351D19E5860066CA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF121C341D19E5860066CA74 /* Assets.xcassets */; };
 		CF121C381D19E5860066CA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF121C361D19E5860066CA74 /* LaunchScreen.storyboard */; };
+		CF121C441D19EE6C0066CA74 /* StarWasCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF121C431D19EE6C0066CA74 /* StarWasCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		CF121C341D19E5860066CA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF121C371D19E5860066CA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF121C391D19E5860066CA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF121C431D19EE6C0066CA74 /* StarWasCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWasCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +52,37 @@
 		CF121C2C1D19E5860066CA74 /* StarWas */ = {
 			isa = PBXGroup;
 			children = (
+				CF121C3F1D19EDC80066CA74 /* Framework */,
+				CF121C401D19EDDB0066CA74 /* App */,
+			);
+			path = StarWas;
+			sourceTree = "<group>";
+		};
+		CF121C3F1D19EDC80066CA74 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		CF121C401D19EDDB0066CA74 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CF121C421D19EDF10066CA74 /* Models */,
 				CF121C2D1D19E5860066CA74 /* AppDelegate.swift */,
 				CF121C341D19E5860066CA74 /* Assets.xcassets */,
 				CF121C361D19E5860066CA74 /* LaunchScreen.storyboard */,
 				CF121C391D19E5860066CA74 /* Info.plist */,
 			);
-			path = StarWas;
+			name = App;
+			sourceTree = "<group>";
+		};
+		CF121C421D19EDF10066CA74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF121C431D19EE6C0066CA74 /* StarWasCharacter.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF121C2E1D19E5860066CA74 /* AppDelegate.swift in Sources */,
+				CF121C441D19EE6C0066CA74 /* StarWasCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
