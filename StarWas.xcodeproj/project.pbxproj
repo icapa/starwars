@@ -12,6 +12,7 @@
 		CF121C381D19E5860066CA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF121C361D19E5860066CA74 /* LaunchScreen.storyboard */; };
 		CF121C441D19EE6C0066CA74 /* StarWasCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF121C431D19EE6C0066CA74 /* StarWasCharacter.swift */; };
 		CF5D21511D1C641E00379DCE /* Affiliations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D21501D1C641E00379DCE /* Affiliations.swift */; };
+		CF5D21541D1C7DF900379DCE /* ForceSensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5D21531D1C7DF900379DCE /* ForceSensitive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		CF121C431D19EE6C0066CA74 /* StarWasCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWasCharacter.swift; sourceTree = "<group>"; };
 		CF5D21501D1C641E00379DCE /* Affiliations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Affiliations.swift; sourceTree = "<group>"; };
 		CF5D21521D1C699800379DCE /* Misc.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Misc.playground; sourceTree = "<group>"; };
+		CF5D21531D1C7DF900379DCE /* ForceSensitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceSensitive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				CF121C431D19EE6C0066CA74 /* StarWasCharacter.swift */,
 				CF5D21501D1C641E00379DCE /* Affiliations.swift */,
+				CF5D21531D1C7DF900379DCE /* ForceSensitive.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5D21541D1C7DF900379DCE /* ForceSensitive.swift in Sources */,
 				CF5D21511D1C641E00379DCE /* Affiliations.swift in Sources */,
 				CF121C2E1D19E5860066CA74 /* AppDelegate.swift in Sources */,
 				CF121C441D19EE6C0066CA74 /* StarWasCharacter.swift in Sources */,

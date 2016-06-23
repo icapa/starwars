@@ -12,7 +12,7 @@ enum StarWasAffiliation {
     
     case galacticEmpire
     case rebelAlliance
-    case firstOder
+    case firstOrder
     case jabbaCriminalEmpire
     case unknown
 }

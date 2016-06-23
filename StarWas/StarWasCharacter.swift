@@ -66,25 +66,49 @@ class StarWarsCharacter : Comparable{
                   affiliation: affiliation)
     }
     
-    
-}
-
-//MARK: - Extensions
-extension StarWarsCharacter{
+    //MARK: - Proxies
     var proxyForComparison : String{
         get{
             return "\(firstName)\(lastName)\(alias)\(url)"
         }
     }
+    
+    var proxyForSorting : String{
+        get{
+            return proxyForComparison
+        }
+    }
+    
+    
+    
+    
 }
+
 
 //MARK: - Equatable & Comparable
 func == (lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool{
+    
+    guard !(lhs === rhs) else{
+        return true
+    }
+    
     return lhs.proxyForComparison == rhs.proxyForComparison
 }
 
 func <(lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool{
-    return lhs.proxyForComparison < rhs.proxyForComparison
+    return lhs.proxyForSorting < rhs.proxyForSorting
 }
 
+//MARK: - Extensions
+
+extension StarWarsCharacter: CustomStringConvertible{
+    var description: String{
+        get{
+            if let name = name, alias=alias{
+                return "<\(self.dynamicType) -- \(name) -- \(alias)>"
+            }
+            return "<\(self.dynamicType)>"
+        }
+    }
+}
 
