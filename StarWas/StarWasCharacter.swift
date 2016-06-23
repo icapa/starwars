@@ -21,7 +21,7 @@ class StarWarsCharacter : Comparable{
     let soundData   : NSData
     let photo       : UIImage
     let url         : NSURL
-    let affiliation : StarWasAffiliation
+    let affiliation : StarWarsAffiliation
     
     //MARK: - Computed properties
     var name : String?{
@@ -43,7 +43,7 @@ class StarWarsCharacter : Comparable{
     
     //MASK: - Initialization
     init(firstName: String?, lastName: String?, alias: String?,
-         soundData: NSData,photo: UIImage,url: NSURL, affiliation: StarWasAffiliation){
+         soundData: NSData,photo: UIImage,url: NSURL, affiliation: StarWarsAffiliation){
         self.firstName = firstName
         self.lastName=lastName
         self.alias=alias
@@ -55,7 +55,7 @@ class StarWarsCharacter : Comparable{
     }
     
     convenience init(alias : String?, soundData: NSData, photo: UIImage,
-                     url: NSURL, affiliation: StarWasAffiliation){
+                     url: NSURL, affiliation: StarWarsAffiliation){
         
         self.init(firstName:nil ,
                   lastName: nil,
@@ -78,9 +78,6 @@ class StarWarsCharacter : Comparable{
             return proxyForComparison
         }
     }
-    
-    
-    
     
 }
 
