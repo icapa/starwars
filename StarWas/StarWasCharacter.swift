@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StarWarsCharacter : Equatable{
+class StarWarsCharacter : Comparable{
     
     enum Affiliate{
         case GalacticEmpire, RebelAlliance, FirstOrder
@@ -78,7 +78,13 @@ extension StarWarsCharacter{
     }
 }
 
-//MARK: - Equatable
+//MARK: - Equatable & Comparable
 func == (lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool{
     return lhs.proxyForComparison == rhs.proxyForComparison
 }
+
+func <(lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool{
+    return lhs.proxyForComparison < rhs.proxyForComparison
+}
+
+
