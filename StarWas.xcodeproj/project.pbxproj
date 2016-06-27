@@ -47,6 +47,8 @@
 		CFEA22091D21AFF000893419 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA22081D21AFF000893419 /* Errors.swift */; };
 		CFEA220B1D21B1D700893419 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220A1D21B1D700893419 /* JSONProcessing.swift */; };
 		CFEA220D1D21B9CC00893419 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220C1D21B9CC00893419 /* Foundation.swift */; };
+		CFEA22101D21D85F00893419 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220F1D21D85F00893419 /* CharacterViewController.swift */; };
+		CFEA22121D21DD2A00893419 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEA22111D21DD2A00893419 /* CharacterViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		CFEA22081D21AFF000893419 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CFEA220A1D21B1D700893419 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		CFEA220C1D21B9CC00893419 /* Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		CFEA220F1D21D85F00893419 /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		CFEA22111D21DD2A00893419 /* CharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		CF121C401D19EDDB0066CA74 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CFEA220E1D21D82D00893419 /* Controllers */,
 				CF121C421D19EDF10066CA74 /* Models */,
 				CF121C2D1D19E5860066CA74 /* AppDelegate.swift */,
 				CF121C341D19E5860066CA74 /* Assets.xcassets */,
@@ -201,6 +206,15 @@
 				CF5D21751D1C900D00379DCE /* yoda.jpg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CFEA220E1D21D82D00893419 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFEA220F1D21D85F00893419 /* CharacterViewController.swift */,
+				CFEA22111D21DD2A00893419 /* CharacterViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,7 @@
 				CF5D21881D1C900D00379DCE /* obiwan.jpg in Resources */,
 				CF5D218D1D1C900D00379DCE /* regularCharacters.json in Resources */,
 				CF5D217A1D1C900D00379DCE /* forceSensitives.json in Resources */,
+				CFEA22121D21DD2A00893419 /* CharacterViewController.xib in Resources */,
 				CF5D21911D1C900D00379DCE /* vader.jpg in Resources */,
 				CF5D21901D1C900D00379DCE /* vader.caf in Resources */,
 				CF5D21871D1C900D00379DCE /* obiwan.caf in Resources */,
@@ -303,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEA22101D21D85F00893419 /* CharacterViewController.swift in Sources */,
 				CF5D21541D1C7DF900379DCE /* ForceSensitive.swift in Sources */,
 				CF5D21511D1C641E00379DCE /* Affiliations.swift in Sources */,
 				CFEA220D1D21B9CC00893419 /* Foundation.swift in Sources */,

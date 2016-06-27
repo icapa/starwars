@@ -24,12 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /* Para las pruebas del modelo */
         
-        
+        // Crear instancia de modelo
         let sound = NSBundle.mainBundle().pathForResource("c3po", ofType: "caf")
         let sonido = NSData(contentsOfFile: sound!)
-        
-        
-        
         
         let imagen = UIImage.init(named: "c3po.jpg")
         let laUrl = NSURL.fileURLWithPath("c3po.jpg")
@@ -44,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else{
             print("No son iguales")
         }
+
+        
+        // Crear window
+        
+        // Crear un VC
+        
+        // Empotrarlo en un navigation
+        
+        // Asignar el nav como rootVC
+        
+        // haver cisible & key a la window
+        
+        
+        
         
         
         return true
