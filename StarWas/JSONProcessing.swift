@@ -127,10 +127,14 @@ func decode ( forceSensitive json: ForceSensivite?) throws -> ForceSensivite{
 }
 
 //MARK: - Loading 
-func loadFromLocalFile(fileName name: String,bundle: NSBundle = NSBundle.mainBundle()) throws -> JSONObject{
+func loadFromLocalFile(fileName name: String,bundle: NSBundle = NSBundle.mainBundle()) throws -> JSONArray{
     if let url = bundle.URLForResource(name),
-        data=NSData(contentsOfURL: url) {
-        return try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
+        data=NSData(contentsOfURL: url),
+    
+        maybeArray = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
+            as? JSONArray,
+            array = maybeArray{
+                return array
     }else{
         throw StarWarsError.jsonParsingError
     }
