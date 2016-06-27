@@ -21,7 +21,7 @@ class StarWarsCharacter : Comparable{
     let soundData   : NSData
     let photo       : UIImage
     let url         : NSURL
-    let affiliation : StarWarsAffiliation
+    let affiliation : StarWasAffiliation
     
     //MARK: - Computed properties
     var name : String?{
@@ -43,7 +43,7 @@ class StarWarsCharacter : Comparable{
     
     //MASK: - Initialization
     init(firstName: String?, lastName: String?, alias: String?,
-         soundData: NSData,photo: UIImage,url: NSURL, affiliation: StarWarsAffiliation){
+         soundData: NSData,photo: UIImage,url: NSURL, affiliation: StarWasAffiliation){
         self.firstName = firstName
         self.lastName=lastName
         self.alias=alias
@@ -54,8 +54,9 @@ class StarWarsCharacter : Comparable{
         
     }
     
+    
     convenience init(alias : String?, soundData: NSData, photo: UIImage,
-                     url: NSURL, affiliation: StarWarsAffiliation){
+                     url: NSURL, affiliation: StarWasAffiliation){
         
         self.init(firstName:nil ,
                   lastName: nil,
@@ -84,6 +85,12 @@ class StarWarsCharacter : Comparable{
 
 //MARK: - Equatable & Comparable
 func == (lhs: StarWarsCharacter, rhs: StarWarsCharacter) -> Bool{
+    
+    // Esto es nuevo, si la clase es distinta, vale
+    guard (lhs.dynamicType === rhs.dynamicType) else{
+        return false
+    }
+    
     
     guard !(lhs === rhs) else{
         return true

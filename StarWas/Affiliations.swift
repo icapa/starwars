@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum StarWarsAffiliation {
+enum StarWasAffiliation {
     
     case galacticEmpire
     case rebelAlliance

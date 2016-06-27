@@ -14,8 +14,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    
+    
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        /* Para las pruebas del modelo */
+        
+        
+        let sound = NSBundle.mainBundle().pathForResource("c3po", ofType: "caf")
+        let sonido = NSData(contentsOfFile: sound!)
+        
+        
+        
+        
+        let imagen = UIImage.init(named: "c3po.jpg")
+        let laUrl = NSURL.fileURLWithPath("c3po.jpg")
+        
+        let prueba1 = StarWarsCharacter(alias: "ivan", soundData: sonido! , photo: imagen!, url: laUrl, affiliation: StarWasAffiliation.firstOrder);
+        
+        let prueba2 = StarWarsCharacter(alias: "ivan1", soundData: sonido! , photo: imagen!, url: laUrl, affiliation: StarWasAffiliation.firstOrder);
+        
+        if (prueba1 == prueba2){
+            print("Son iguales");
+        }
+        else{
+            print("No son iguales")
+        }
+        
+        
         return true
     }
 

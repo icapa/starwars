@@ -11,7 +11,7 @@ import UIKit
 class StarWarsUniverse {
     //MARK: Utility types
     typealias StarWarsArray         = [StarWarsCharacter]
-    typealias StarWarsDictionary    = [StarWarsAffiliation : StarWarsArray]
+    typealias StarWarsDictionary    = [StarWasAffiliation : StarWarsArray]
     
     //MARK: Utils
     func makeEmptyAffiliations () -> StarWarsDictionary{
