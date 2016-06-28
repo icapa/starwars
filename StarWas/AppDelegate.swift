@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let jabbaSound = NSData(contentsOfURL: jabbaUrl)!
         
         
-        let model = StarWarsCharacter(firstName: "Jabba", lastName: "Desilijic Tiure", alias: "Jabba the Jutt", soundData: jabbaSound, photo: UIImage(named: "jabba.jpg")!, url: NSURL(string: "http://www.google.es")!, affiliation: .jabbaCriminalEmpire)
+        let model = StarWarsCharacter(firstName: "Jabba", lastName: "Desilijic Tiure", alias: "Jabba the Jutt", soundData: jabbaSound, photo: UIImage(named: "jabba.jpg")!, url: NSURL(string: "https://en.wikipedia.org/wiki/Jabba_the_Hutt")!, affiliation: .jabbaCriminalEmpire)
         
         
         // Crear window
