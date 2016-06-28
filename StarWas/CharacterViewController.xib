@@ -35,6 +35,9 @@
                                 <rect key="frame" x="261" y="7" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Wiki"/>
+                                <connections>
+                                    <action selector="displayWiki:" destination="-1" eventType="touchUpInside" id="tc6-Ga-ZwL"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="displayWiki:" destination="-1" id="EIr-Om-Bjv"/>

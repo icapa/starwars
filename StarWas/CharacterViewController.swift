@@ -33,12 +33,17 @@ class CharacterViewController: UIViewController {
         
     }
     
+    @IBAction func displayWiki(sender: AnyObject) {
+        // Crear un wikiCV
+        let wVC = WikiViewController(model: model)
+        
+        // Hacer un push sobre mi NavigationController
+        navigationController?.pushViewController(wVC, animated: true)
+    }
     //MARK: - Actions
     @IBAction func playSound(sender: AnyObject) {
     }
-    @IBAction func displayWiki(sender: AnyObject) {
-    }
-
+    
     
     // should -- will -- did
     override func viewDidLoad() {
