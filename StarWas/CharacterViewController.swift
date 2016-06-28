@@ -12,7 +12,7 @@ class CharacterViewController: UIViewController {
     
     init(model: StarWarsCharacter){
         self.model = model
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "CharacterViewController", bundle: nil)
         
     }
     

@@ -25,34 +25,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Para las pruebas del modelo */
         
         // Crear instancia de modelo
-        let sound = NSBundle.mainBundle().pathForResource("c3po", ofType: "caf")
-        let sonido = NSData(contentsOfFile: sound!)
         
-        let imagen = UIImage.init(named: "c3po.jpg")
-        let laUrl = NSURL.fileURLWithPath("c3po.jpg")
         
-        let prueba1 = StarWarsCharacter(alias: "ivan", soundData: sonido! , photo: imagen!, url: laUrl, affiliation: StarWasAffiliation.firstOrder);
+        let jabbaUrl = NSBundle.mainBundle().URLForResource("jabba.caf")!
+        let jabbaSound = NSData(contentsOfURL: jabbaUrl)!
         
-        let prueba2 = StarWarsCharacter(alias: "ivan1", soundData: sonido! , photo: imagen!, url: laUrl, affiliation: StarWasAffiliation.firstOrder);
         
-        if (prueba1 == prueba2){
-            print("Son iguales");
-        }
-        else{
-            print("No son iguales")
-        }
-
+        let model = StarWarsCharacter(firstName: "Jabba", lastName: "Desilijic Tiure", alias: "Jabba the Jutt", soundData: jabbaSound, photo: UIImage(named: "jabba.jpg")!, url: NSURL(string: "http://www.google.es")!, affiliation: .jabbaCriminalEmpire)
+        
         
         // Crear window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         // Crear un VC
+        let vc = CharacterViewController(model: model)
         
         // Empotrarlo en un navigation
+        let nav = UINavigationController(rootViewController: vc)
         
         // Asignar el nav como rootVC
+        window?.rootViewController = nav
         
         // haver cisible & key a la window
-        
+        window?.makeKeyAndVisible()
         
         
         
