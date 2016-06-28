@@ -46,6 +46,7 @@
 		CF5D21931D1C900D00379DCE /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF5D21751D1C900D00379DCE /* yoda.jpg */; };
 		CF60D73A1D231C4600F324CD /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60D7381D231C4600F324CD /* WikiViewController.swift */; };
 		CF60D73B1D231C4600F324CD /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF60D7391D231C4600F324CD /* WikiViewController.xib */; };
+		CF60D73D1D232D2C00F324CD /* UniverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60D73C1D232D2C00F324CD /* UniverseViewController.swift */; };
 		CFEA22091D21AFF000893419 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA22081D21AFF000893419 /* Errors.swift */; };
 		CFEA220B1D21B1D700893419 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220A1D21B1D700893419 /* JSONProcessing.swift */; };
 		CFEA220D1D21B9CC00893419 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220C1D21B9CC00893419 /* Foundation.swift */; };
@@ -96,6 +97,7 @@
 		CF5D21751D1C900D00379DCE /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
 		CF60D7381D231C4600F324CD /* WikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
 		CF60D7391D231C4600F324CD /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
+		CF60D73C1D232D2C00F324CD /* UniverseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniverseViewController.swift; sourceTree = "<group>"; };
 		CFEA22081D21AFF000893419 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CFEA220A1D21B1D700893419 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		CFEA220C1D21B9CC00893419 /* Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				CFEA22111D21DD2A00893419 /* CharacterViewController.xib */,
 				CF60D7381D231C4600F324CD /* WikiViewController.swift */,
 				CF60D7391D231C4600F324CD /* WikiViewController.xib */,
+				CF60D73C1D232D2C00F324CD /* UniverseViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				CFEA220B1D21B1D700893419 /* JSONProcessing.swift in Sources */,
 				CF60D73A1D231C4600F324CD /* WikiViewController.swift in Sources */,
 				CF5D21561D1C8C9900379DCE /* StarWarsUniverse.swift in Sources */,
+				CF60D73D1D232D2C00F324CD /* UniverseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
