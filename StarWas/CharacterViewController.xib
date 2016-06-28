@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterViewController" customModule="StarWas">
             <connections>
+                <outlet property="photoView" destination="nZG-SN-RBB" id="1dj-6p-I5a"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ImX-eP-Nzo"/>
             </connections>
         </placeholder>
@@ -14,6 +15,34 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nZG-SN-RBB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KrC-CL-Eyp">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="done" systemItem="play" id="vE3-29-2t3">
+                            <connections>
+                                <action selector="playSound:" destination="-1" id="aGf-6i-X2G"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="222" style="plain" systemItem="fixedSpace" id="plE-B4-hK2"/>
+                        <barButtonItem style="plain" id="LWH-hR-I2L">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kaD-IK-ey6">
+                                <rect key="frame" x="261" y="7" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Wiki"/>
+                            </button>
+                            <connections>
+                                <action selector="displayWiki:" destination="-1" id="EIr-Om-Bjv"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="410" y="355"/>
         </view>
