@@ -44,6 +44,8 @@
 		CF5D21911D1C900D00379DCE /* vader.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF5D21731D1C900D00379DCE /* vader.jpg */; };
 		CF5D21921D1C900D00379DCE /* yoda.caf in Resources */ = {isa = PBXBuildFile; fileRef = CF5D21741D1C900D00379DCE /* yoda.caf */; };
 		CF5D21931D1C900D00379DCE /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF5D21751D1C900D00379DCE /* yoda.jpg */; };
+		CF60D73A1D231C4600F324CD /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF60D7381D231C4600F324CD /* WikiViewController.swift */; };
+		CF60D73B1D231C4600F324CD /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF60D7391D231C4600F324CD /* WikiViewController.xib */; };
 		CFEA22091D21AFF000893419 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA22081D21AFF000893419 /* Errors.swift */; };
 		CFEA220B1D21B1D700893419 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220A1D21B1D700893419 /* JSONProcessing.swift */; };
 		CFEA220D1D21B9CC00893419 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA220C1D21B9CC00893419 /* Foundation.swift */; };
@@ -92,6 +94,8 @@
 		CF5D21731D1C900D00379DCE /* vader.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vader.jpg; sourceTree = "<group>"; };
 		CF5D21741D1C900D00379DCE /* yoda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yoda.caf; sourceTree = "<group>"; };
 		CF5D21751D1C900D00379DCE /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
+		CF60D7381D231C4600F324CD /* WikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		CF60D7391D231C4600F324CD /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
 		CFEA22081D21AFF000893419 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CFEA220A1D21B1D700893419 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
 		CFEA220C1D21B9CC00893419 /* Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			children = (
 				CFEA220F1D21D85F00893419 /* CharacterViewController.swift */,
 				CFEA22111D21DD2A00893419 /* CharacterViewController.xib */,
+				CF60D7381D231C4600F324CD /* WikiViewController.swift */,
+				CF60D7391D231C4600F324CD /* WikiViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				CF5D21761D1C900D00379DCE /* c3po.caf in Resources */,
 				CF121C381D19E5860066CA74 /* LaunchScreen.storyboard in Resources */,
 				CF5D218E1D1C900D00379DCE /* tarkin.caf in Resources */,
+				CF60D73B1D231C4600F324CD /* WikiViewController.xib in Resources */,
 				CF121C351D19E5860066CA74 /* Assets.xcassets in Resources */,
 				CF5D21881D1C900D00379DCE /* obiwan.jpg in Resources */,
 				CF5D218D1D1C900D00379DCE /* regularCharacters.json in Resources */,
@@ -326,6 +333,7 @@
 				CF121C441D19EE6C0066CA74 /* StarWasCharacter.swift in Sources */,
 				CFEA22091D21AFF000893419 /* Errors.swift in Sources */,
 				CFEA220B1D21B1D700893419 /* JSONProcessing.swift in Sources */,
+				CF60D73A1D231C4600F324CD /* WikiViewController.swift in Sources */,
 				CF5D21561D1C8C9900379DCE /* StarWarsUniverse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
