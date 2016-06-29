@@ -18,7 +18,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nZG-SN-RBB">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KrC-CL-Eyp">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
@@ -33,7 +33,7 @@
                         <barButtonItem style="plain" id="LWH-hR-I2L">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kaD-IK-ey6">
                                 <rect key="frame" x="261" y="7" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="Wiki"/>
                                 <connections>
                                     <action selector="displayWiki:" destination="-1" eventType="touchUpInside" id="tc6-Ga-ZwL"/>

@@ -9,7 +9,7 @@
 import UIKit
 class CharacterViewController: UIViewController {
     //MARK: - Properties
-    let model : StarWarsCharacter
+    var model : StarWarsCharacter
     
     @IBOutlet weak var photoView: UIImageView!
     
@@ -72,4 +72,14 @@ class CharacterViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
+}
+
+//MARK: - Extension
+extension CharacterViewController: UniverseViewControllerDelegate{
+    func universeViewController(vc: UniverseViewController, didSelectCharacter character: StarWarsCharacter) {
+        // Actualizar el modelo 
+        model = character
+        // Sincronizar las vistas con el nuevo modelo
+        self.syncModelWithView()
+    }
 }

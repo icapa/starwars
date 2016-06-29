@@ -43,15 +43,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //-- Esto se puede hacer mas facil con map, lo de arriba
             let model = StarWarsUniverse(characters: chars)
             
-            // Crear un view controller
+            // Crear un UniverseVC
             let uVC = UniverseViewController(model: model)
             
             // Lo metemos en un Nav
-            let nav = UINavigationController(rootViewController: uVC)
+            let uNav = UINavigationController(rootViewController: uVC)
+            
+            // Creamos un Character VC
+            let charVC = CharacterViewController(model: model.character(atIndex: 0, forAffiliation: .galacticEmpire))
+            
+            
+            // Lo metemos en otro Navigation
+            let charNav = UINavigationController(rootViewController: charVC)
+            
+            // Creamos un splitView y le endosamos los dos navs
+            
+            let splitVC = UISplitViewController()
+            
+            // Metemos los nav en el split
+            splitVC.viewControllers = [uNav,charNav]
+            
             
             // Asignamos nav como root View controller
-            window?.rootViewController = nav
+            window?.rootViewController = splitVC
             
+            // Asignamos delegados
+            uVC.delegate = charVC
+            
+            // Mostramos la window
             window?.makeKeyAndVisible()
         
             
