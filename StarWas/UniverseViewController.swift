@@ -10,86 +10,85 @@ import UIKit
 
 class UniverseViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    //MARK: - Properties
+    let model : StarWarsUniverse
+    
+    
+    //MARK: - Initialization
+    init(model: StarWarsUniverse){
+        self.model=model
+        super.init(nibName: nil, bundle: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
+    
+   
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        // numero de secciones
+        return model.affiliationCount
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        // Numero de personajes en una determinada afiliacion
+        
+        return model.characterCount(forAffiliation: getAffiliation(forSection:  section))
+        
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        // Tipo de celda
+        let cellId = "StarWarsCell"
+        
+        
 
-        // Configure the cell...
-
-        return cell
+        // Averiguar el personaje
+        let character = model.character(atIndex: indexPath.row, forAffiliation: getAffiliation(forSection: indexPath.section))
+        
+        // Crear la celda
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellId)
+        if cell == nil{
+            // El opcional está vacío: hay que crearla a pelo
+            cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellId)
+        }
+        
+        // Sincronizar personaje -> celda
+        cell?.imageView?.image = character.photo
+        cell?.textLabel?.text = character.alias
+        cell?.detailTextLabel?.text = character.name
+        
+        return cell!
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // Afiliacion
+        
+        return getAffiliation(forSection: section).rawValue
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+
+
+    //MARK: - Utilities
+    func getAffiliation(forSection section : Int)->StarWasAffiliation{
+        var aff : StarWasAffiliation = .unknown
+        switch section {
+        case 0:
+            aff = .galacticEmpire
+        case 1:
+            aff = .rebelAlliance
+        case 2:
+            aff = .firstOrder
+        case 3:
+            aff = .jabbaCriminalEmpire
+        default:
+            aff = .unknown
+        }
+        return aff
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
