@@ -21,46 +21,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
-            
-        
-        
-        
-        
-        
-        // Override point for customization after application launch.
-        
-        /* Para las pruebas del modelo */
-        
-        // Crear instancia de modelo
+        // Crear la window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         
+        // Crear instancia de modelo
+        do{
+            var json = try loadFromLocalFile(fileName: "regularCharacters.json")
+            json.appendContentsOf(try loadFromLocalFile(fileName: "forceSensitives.json"))
+            
+            var chars = [StarWarsCharacter]()
+            for dict in json{
+                do{
+                    let char = try decode(starWarsCharacter: dict)
+                    chars.append(char)
+                }
+                catch{
+                    
+                }
+            }
+            //-- Esto se puede hacer mas facil con map, lo de arriba
+            let model = StarWarsUniverse(characters: chars)
+            
+            // Crear un view controller
+            let uVC = UniverseViewController(model: model)
+            
+            // Lo metemos en un Nav
+            let nav = UINavigationController(rootViewController: uVC)
+            
+            // Asignamos nav como root View controller
+            window?.rootViewController = nav
+            
+            window?.makeKeyAndVisible()
         
-        
-        let jabbaUrl = NSBundle.mainBundle().URLForResource("jabba.caf")!
-        let jabbaSound = NSData(contentsOfURL: jabbaUrl)!
-        
-        
-        let model = StarWarsCharacter(firstName: "Jabba", lastName: "Desilijic Tiure", alias: "Jabba the Jutt", soundData: jabbaSound, photo: UIImage(named: "jabba.jpg")!, url: NSURL(string: "https://en.wikipedia.org/wiki/Jabba_the_Hutt")!, affiliation: .jabbaCriminalEmpire)
-        
-        
-        // Crear window
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        // Crear un VC
-        let vc = CharacterViewController(model: model)
-        
-        // Empotrarlo en un navigation
-        let nav = UINavigationController(rootViewController: vc)
-        
-        // Asignar el nav como rootVC
-        window?.rootViewController = nav
-        
-        // haver cisible & key a la window
-        window?.makeKeyAndVisible()
-        
-        
-        
+            
+        }catch{
+            fatalError("Error while loading JSON")
+        }
         
         return true
     }
