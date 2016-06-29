@@ -25,6 +25,19 @@ class UniverseViewController: UITableViewController {
     }
     
    
+    // MARK: - Table view delegate
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // Averiguar cual es el personaje
+        let char = character(forIndexPath: indexPath)
+        
+        // Crear un CharacterViewControler
+        let charVC = CharacterViewController(model: char)
+        
+        // Hacerle un push
+        self.navigationController?.pushViewController(charVC, animated: true)
+        
+    }
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -89,6 +102,11 @@ class UniverseViewController: UITableViewController {
             aff = .unknown
         }
         return aff
+    }
+    
+    func character(forIndexPath indexPath: NSIndexPath)->StarWarsCharacter{
+        return model.character(atIndex: indexPath.row, forAffiliation: getAffiliation(forSection: indexPath.section))
+
     }
 
 }
