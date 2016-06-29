@@ -8,6 +8,9 @@
 
 import UIKit
 
+let CharacterDidChangeNotification = "Selected Character did change"
+let CharacterKey = "Key"
+
 class UniverseViewController: UITableViewController {
 
     //MARK: - Properties
@@ -38,6 +41,14 @@ class UniverseViewController: UITableViewController {
         
         // Avisamos al delegado, antes haciamos un push
         delegate?.universeViewController(self, didSelectCharacter: char)
+        
+        // Enviamos lo mismo via notificaciones
+        let nc = NSNotificationCenter.defaultCenter()
+        
+        let notif = NSNotification(name: CharacterDidChangeNotification ,
+                                   object: self, userInfo: [CharacterKey:char])
+        nc.postNotification(notif)
+        
         
         
         

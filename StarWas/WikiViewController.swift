@@ -42,6 +42,18 @@ class WikiViewController: UIViewController, UIWebViewDelegate{
         syncModelWithView()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: #selector(characterDidChange), name: CharacterDidChangeNotification, object: nil)
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.removeObserver(self)
+        
+    }
 
     //MARK: - Memory
     override func didReceiveMemoryWarning() {
@@ -50,6 +62,20 @@ class WikiViewController: UIViewController, UIWebViewDelegate{
     }
     
     
+    func characterDidChange(notification: NSNotification){
+        
+        // Sacar el userInfo
+        let info = notification.userInfo
+        // Sacar el personaje
+        let char = info![CharacterKey] as? StarWarsCharacter
+        
+        model = char!
+        
+        // Actualizar el modelo
+        
+        // Sincronizar las vistas
+        syncModelWithView()
+    }
     
     //MARK: - UIWebViewDelegate
     func webViewDidFinishLoad(webView: UIWebView) {
